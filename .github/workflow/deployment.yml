@@ -11,10 +11,9 @@ on:
       - main
       - development
 
-
 jobs:
 
-  Plan_to_sec_feature_branches:
+  Plan_to_sec_development:
     if: github.ref == 'refs/heads/development'
     uses: thecornelisinc/github_action/.github/workflows/aws_tf_plan.yml@development
     with:
