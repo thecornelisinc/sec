@@ -4,7 +4,7 @@ resource "aws_instance" "example" {
   instance_type = var.instance_type
 
   tags = {
-    Name = "ExampleEC2Instance"
+    Name = "Sec_server"
     environment= "log"
   }
 }
