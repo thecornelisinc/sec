@@ -33,7 +33,7 @@ jobs:
       path: sec/
       environment: 'sec'
       aws_region: 'us-east-1'
-      aws_role_to_assume: 'arn:aws:iam::863980140052:role/githubaction' 
+      aws_role_to_assume: 'arn:aws:iam::357225030460:role/sec_github_action' 
     permissions:
       id-token: write  # Required for OIDC
       contents: read
