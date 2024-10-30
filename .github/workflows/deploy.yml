@@ -1,0 +1,23 @@
+name: Deploy to AWS Environments with OIDC and Snyk IaC
+
+on:
+  push:
+    branches: 
+      - main
+  
+  pull_request:
+    branches:
+      - main
+
+jobs:
+
+  Deploy_to_sec_main:
+    uses: thecornelisinc/shared_repo/.github/workflows/apply.yml@main
+    with:
+      path: sec  # Remove the trailing slash
+      environment: 'sec'
+      aws_region: 'us-east-1'
+      aws_role_to_assume: 'arn:aws:iam::357225030460:role/sec_github_action' 
+    permissions:
+      id-token: write  # Required for OIDC
+      contents: read
