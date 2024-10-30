@@ -15,7 +15,7 @@ jobs:
 
   Plan_to_sec_development:
     if: github.ref == 'refs/heads/development'
-    uses: thecornelisinc/github_action/.github/workflows/aws_tf_plan.yml@development
+    uses: thecornelisinc/github_action/.github/workflows/plan.yml@development
     with:
       environment: 'sec'
       aws_region: 'us-east-1'
@@ -26,7 +26,7 @@ jobs:
 
   Deploy_to_sec_main:
     if: github.ref == 'refs/heads/main'
-    uses: thecornelisinc/github_action/.github/workflows/aws_tf_apply.yml@main
+    uses: thecornelisinc/github_action/.github/workflows/apply.yml@main
     with:
       environment: 'sec'
       aws_region: 'us-east-1'
