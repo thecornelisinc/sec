@@ -17,7 +17,6 @@ jobs:
     if: github.ref == 'refs/heads/development'
     uses: thecornelisinc/github_action/.github/workflows/aws_tf_plan.yml@development
     with:
-      # path: 'sec'
       environment: 'sec'
       aws_region: 'us-east-1'
       aws_role_to_assume: 'arn:aws:iam::863980140052:role/sec_github_action' 
@@ -29,7 +28,6 @@ jobs:
     if: github.ref == 'refs/heads/main'
     uses: thecornelisinc/github_action/.github/workflows/aws_tf_apply.yml@main
     with:
-      # path: 'sec'
       environment: 'sec'
       aws_region: 'us-east-1'
       aws_role_to_assume: 'arn:aws:iam::863980140052:role/sec_github_action' 
