@@ -3,11 +3,11 @@ name: Deploy to AWS Environments with OIDC and Snyk IaC
 on:
   push:
     branches: 
-      - main
+      - development
   
   pull_request:
     branches:
-      - main
+      - development
 
 jobs:
     Plan_to_sec_development:
