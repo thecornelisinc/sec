@@ -5,6 +5,6 @@ resource "aws_instance" "example" {
 
   tags = {
     Name = "Sec_server"
-    environment= "Securitys_qt1"
+    environment= "Security_server"
   }
 }
