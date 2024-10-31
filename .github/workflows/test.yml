@@ -1,0 +1,23 @@
+# .github/workflows/deploy_dev.yml
+name: Deploy to sec main branch
+
+on:
+  push:
+    branches: 
+      - development
+  
+  pull_request:
+    branches:
+      - development
+
+jobs:
+  deploy:
+    name: Deploy to Development Environment
+    uses: thecornelisinc/shared_repo/.github/workflows/plan.yml@main  
+    with:
+      account: sec
+      aws_region: 'us-east-1'
+      aws_role_to_assume: 'arn:aws:iam::863980140052:role/sec_github_action' 
+    permissions:
+      id-token: write
+      contents: read
