@@ -1,4 +1,5 @@
-name: Deploy to AWS Environments with OIDC and Snyk IaC
+# .github/workflows/deploy_dev.yml
+name: Deploy to sec main branch
 
 on:
   push:
@@ -10,13 +11,15 @@ on:
       - development
 
 jobs:
-    Plan_to_sec_development:
-        uses: thecornelisinc/shared_repo/.github/workflows/apply.yml@development
-        with:
-            path: sec  # Remove the trailing slash
-            environment: sec
-            aws_region: us-east-1
-            aws_role_to_assume: arn:aws:iam::357225030460:role/sec_github_action
-            permissions:
-            id-token: write  # Required for OIDC
-            contents: read
+
+  deploy:
+    name: Deploy to Development Environment
+    uses: thecornelisinc/shared_repo/.github/workflows/plan.yml@main  
+    with:
+      account: sec
+      aws_region: 'us-east-1'
+      aws_role_to_assume: 'arn:aws:iam::863980140052:role/sec_github_action' 
+    permissions:
+      id-token: write
+      contents: read
+
