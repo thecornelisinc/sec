@@ -39,6 +39,6 @@ resource "aws_instance" "public_instance" {
   associate_public_ip_address = true  # Public IP makes it accessible from the internet
 
   tags = {
-    Name = "InsecureInstance"
+    Name = "InsecureInstance1"
   }
 }
