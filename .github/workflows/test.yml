@@ -11,6 +11,7 @@ on:
       - development
 
 jobs:
+
   deploy:
     name: Deploy to Development Environment
     uses: thecornelisinc/shared_repo/.github/workflows/plan.yml@main  
@@ -21,3 +22,4 @@ jobs:
     permissions:
       id-token: write
       contents: read
+
