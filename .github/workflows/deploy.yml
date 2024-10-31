@@ -35,7 +35,6 @@ jobs:
     uses: thecornelisinc/shared_repo/.github/workflows/apply.yml@main  # Replace with the owner and repo where reusable workflow exists
     with:
       account: sec
-      path: sec/terraform
       aws_region: 'us-east-1'
       aws_role_to_assume: 'arn:aws:iam::357225030460:role/sec_github_action' 
     permissions:
