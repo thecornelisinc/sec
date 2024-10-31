@@ -1,23 +1,43 @@
-name: Deploy to AWS Environments with OIDC and Snyk IaC
+# name: Deploy to AWS Environments with OIDC and Snyk IaC
+
+# on:
+#   push:
+#     branches: 
+#       - main
+  
+#   pull_request:
+#     branches:
+#       - main
+
+# jobs:
+
+#   Deploy_to_sec_main:
+#     uses: thecornelisinc/shared_repo/.github/workflows/apply.yml@main
+#     with:
+#       path: sec  # Remove the trailing slash
+#       environment: 'sec'
+#       aws_region: 'us-east-1'
+#       aws_role_to_assume: 'arn:aws:iam::357225030460:role/sec_github_action' 
+#     permissions:
+#       id-token: write  # Required for OIDC
+#       contents: read
+# .github/workflows/deploy_dev.yml
+name: Deploy to sec main branch
 
 on:
   push:
-    branches: 
-      - main
-  
-  pull_request:
     branches:
-      - main
+      - main  # Adjust based on the branch name you use for dev
 
 jobs:
-
-  Deploy_to_sec_main:
-    uses: thecornelisinc/shared_repo/.github/workflows/apply.yml@main
+  deploy:
+    name: Deploy to Development Environment
+    uses: thecornelisinc/shared_repo/.github/workflows/apply.yml@main  # Replace with the owner and repo where reusable workflow exists
     with:
-      path: sec  # Remove the trailing slash
-      environment: 'sec'
+      account: sec
+      path: sec 
       aws_region: 'us-east-1'
       aws_role_to_assume: 'arn:aws:iam::357225030460:role/sec_github_action' 
     permissions:
-      id-token: write  # Required for OIDC
+      id-token: write
       contents: read
