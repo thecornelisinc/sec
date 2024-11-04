@@ -42,3 +42,11 @@ resource "aws_instance" "public_instance" {
     Name = "InsecureInstance1"
   }
 }
+
+
+
+
+
+
+
+
