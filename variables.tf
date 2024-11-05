@@ -6,5 +6,5 @@ variable "instance_type" {
 variable "ami" {
   type = string
 
-  description = "Other11"
+  description = "Other111"
 }
