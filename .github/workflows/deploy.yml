@@ -21,4 +21,4 @@ jobs:
       id-token: write  # Required for OIDC
       contents: read
     secrets:
-      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN}}
+      snyk_token: ${{ secrets.SNYK_TOKEN }}
