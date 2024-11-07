@@ -5,6 +5,7 @@ data "aws_ec2_instance_type" "example" {
 output "aws_ec2_instance_type" {
   value = {
     Id= data.aws_ec2_instance_type.example.id,
-    Hypervisor = data.aws_ec2_instance_type.example.Hypervisor}
+    Hypervisor = data.aws_ec2_instance_type.example.Hypervisor,
+    name = data.aws_ec2_instance_type.example.instance_type}
 
 }
