@@ -1,6 +1,5 @@
 resource "aws_s3_bucket" "secure_bucket" {
   bucket = "secure-terraform-s3-bucket-aao"
-  acl    = "private"
 
   tags = {
     Name = "Secure S3 Bucket2"
