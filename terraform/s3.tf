@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "secure_bucket" {
   acl    = "private"
 
   tags = {
-    Name = "Secure S3 Bucket1"
+    Name = "Secure S3 Bucket2"
   }
 }
 
