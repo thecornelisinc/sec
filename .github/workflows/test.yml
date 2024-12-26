@@ -14,7 +14,7 @@ jobs:
     with:
       account: sec
       aws_region: 'us-east-1'
-      aws_role_to_assume: 'arn:aws:iam::863980140052:role/sec_github_action' 
+      aws_role_to_assume: 'arn-of-the-assume-role'
     permissions:
       id-token: write
       contents: read
