@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "secure_bucket" {
   bucket = "secure-terraform-s3-bucket-aao"
 
   tags = {
-    Name = "Secure S3 Bucket2"
+    Name = "Demo bucket"
   }
 }
 
